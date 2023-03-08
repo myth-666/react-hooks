@@ -62,14 +62,15 @@ import { useRef, useState, useEffect } from "react";
   },[password])
 
   function set(){
+    if (password=="" && newpassword=="")
+    alert("mandatory fields")
     if (newpassword==refpassword.current)
     alert("hi")
     else(
       alert("incorrect password")
       
     )
-    if (password=="" && newpassword=="")
-    alert("mandatory fields")
+  
     setPassword("");
       setNewpassword("");
   }
