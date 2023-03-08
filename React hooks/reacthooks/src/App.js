@@ -14,24 +14,24 @@ import { useRef, useState, useEffect } from "react";
   //   <div>learning useref<br/>
   //   <input ref={refelement} value={name} onChange={(e)=>{setName(e.target.value)}}/><button onClick={Reset}>Reset</button></div></>
   // )
+ function App3(){
+  const [inputValue, setInputValue] = useState("");
+  const count = useRef(0);
 
-  // const [inputValue, setInputValue] = useState("");
-  // const count = useRef(0);
+  useEffect(() => {
+    count.current = count.current + 1;
+  });
 
-  // useEffect(() => {
-  //   count.current = count.current + 1;
-  // });
-
-  // return (
-  //   <>
-  //     <input
-  //       type="text"
-  //       value={inputValue}
-  //       onChange={(e) => setInputValue(e.target.value)}
-  //     />
-  //     <h1>Render Count: {count.current}</h1>
-  //   </>
-  // );
+  return (
+    <>
+      <input
+        type="text"
+        value={inputValue}
+        onChange={(e) => setInputValue(e.target.value)}
+      />
+      <h1>Render Count: {count.current}</h1>
+    </>
+  );}
   function App2(){
   const [inputValue, setInputValue] = useState("");
   const previousInputValue = useRef("");
