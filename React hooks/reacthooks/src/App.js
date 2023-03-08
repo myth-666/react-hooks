@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from "react";
-export default function App() {
+
   // const [name,setName]=useState("");
   // const refelement=useRef("")
   // console.log(refelement)
@@ -32,25 +32,27 @@ export default function App() {
   //     <h1>Render Count: {count.current}</h1>
   //   </>
   // );
-  // const [inputValue, setInputValue] = useState("");
-  // const previousInputValue = useRef("");
+  function App2(){
+  const [inputValue, setInputValue] = useState("");
+  const previousInputValue = useRef("");
 
-  // useEffect(() => {
-  //   previousInputValue.current = inputValue;
-  // }, [inputValue]);
-  // console.log(inputValue)
+  useEffect(() => {
+    previousInputValue.current = inputValue;
+  }, [inputValue]);
+  console.log(inputValue)
 
-  // return (
-  //   <>
-  //     <input
-  //       type="text"
-  //       value={inputValue}
-  //       onChange={(e) => setInputValue(e.target.value)}
-  //     />
-  //     <h2>Current Value: {inputValue}</h2>
-  //     <h2>Previous Value: {previousInputValue.current}</h2>
-  //   </>
-  // );
+  return (
+    <>
+      <input
+        type="text"
+        value={inputValue}
+        onChange={(e) => setInputValue(e.target.value)}
+      />
+      <h2>Current Value: {inputValue}</h2>
+      <h2>Previous Value: {previousInputValue.current}</h2>
+    </>
+  );}
+  export default function App() {
   const [password, setPassword] = useState("");
   const [newpassword, setNewpassword] = useState("");
   const refpassword=useRef("");
@@ -66,12 +68,22 @@ export default function App() {
       alert("incorrect password")
       
     )
+    if (password=="" && newpassword=="")
+    alert("mandatory fields")
     setPassword("");
       setNewpassword("");
   }
   return (
     <>
-      <div>
+    <div style={{
+        border:"1px solid gray",
+        width:"50%",
+        
+        padding:"10px 20px",
+        margin:"20%",
+      }}>
+      <div style={{display:"flex",
+    flexDirection:"column"}}>
         <h3>New Password</h3>
         <br />
         Enter password:
@@ -91,7 +103,9 @@ export default function App() {
             setNewpassword(e.target.value);
           }}
         /><br/>
-        <button onClick={set}>Set</button>
+        <div style={{textAlign:"center"}}><button onClick={set} style={{padding:"5px 10%",
+      fontSize:"large"}}>Set</button></div>
+      </div>
       </div>
     </>
   );
