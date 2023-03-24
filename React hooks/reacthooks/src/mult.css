@@ -1,0 +1,60 @@
+body{
+    
+    background-color:rgb(75, 75, 75);
+    padding: 100px 30%;
+}
+.mult_box{
+    background-color: rgb(122, 122, 122);
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    padding: 20px;
+    border-radius: 20px;
+}
+.mult_box_row1{
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+   
+}
+.mult_box_row1 input{
+    width: 100%;
+    border: none;
+    outline: none;
+    margin-right: 10px;
+}
+.mult_box_row1 button{
+    padding:5px 20px;
+    border-radius: 10px;
+  
+    background-color: rgb(113, 93, 133);
+    border: none;
+    outline:none;
+}
+.mult_box_row1 button:hover{
+    background-color: rgb(73, 11, 145); 
+    color: white;
+}
+.mult_box_row2{
+    
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.mult_box_row2_label{
+    width: 30%;
+    background-color: rgb(168, 105, 105);
+}
+.mult_box_row2 button{
+    background-color: rgb(177, 17, 17);
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+.mult_box_row2 button:hover{
+    background-color: rgb(255, 0, 0);
+    color: white;
+}
